@@ -21,6 +21,7 @@
 :root {
     --primary-color: cyan;
     --secondary-color: #ffffff;
+    --test-background-color: rgb(0, 0, 95);
     --header-bg: rgba(0, 78, 194, 0.36);
     --section-bg: rgba(0, 78, 194, 0.2);
     --card-bg: rgba(255, 255, 255, 0.1);
@@ -31,6 +32,7 @@
     --spacing-sm: 0.75rem; /* 12px */
     --spacing-md: 1.25rem; /* 20px */
     --spacing-lg: 2rem; /* 32px */
+
 }
 
 /* Body Styles */
@@ -44,3 +46,38 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
 }
+
+
+/*Test mode styles*/
+
+
+
+@keyframes moveBanner {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+.test-banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--test-background-color);
+  color: black;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  z-index: 10000;
+  animation: moveBanner 10s linear infinite;
+  cursor: default;
+}
+
+.test-banner .highlight {
+  color: red;
+}
+
+/*Test mode styles*/
